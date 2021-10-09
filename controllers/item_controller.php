@@ -23,7 +23,8 @@
         //     if($deposit==NULL){
         //         $deposit=0;
         //     }
-             Item::add($id,$name,$detail);
+            
+             Item::add($name,$detail);
              ItemController::index();
         }
         // public function updateForm(){
