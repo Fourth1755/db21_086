@@ -59,7 +59,7 @@
              require_once('views/item/deleteConfirm.php');
         }
         public function delete(){
-             $id=$_GET['orderID'];
+             $id=$_GET['itemID'];
              $item=Item::delete($id);
              ItemController::index();
         }

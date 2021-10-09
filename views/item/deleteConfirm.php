@@ -21,7 +21,7 @@
         ?>
     <form method="get" action="" style="width: 40%;">
         <input type="hidden" name="controller" value="item"/>
-        <input type="hidden" name="itemID" value="<?php echo $order->id?>"/>
+        <input type="hidden" name="itemID" value="<?php echo $item->id?>"/>
         <button class="btn btn-light" type="submit" name="action" value="index">Back</button>
         <button  class="btn btn-danger" type="submit" name="action" value="delete">Delete</button>
     </form>
