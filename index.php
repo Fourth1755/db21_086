@@ -50,5 +50,11 @@
     </div>
   </div>
 </nav>
+<div style="text-align: center;" class="text-light">
+        <?php
+            echo "controller=".$controller.",action= ".$action;
+        ?>
+      </div>
+        <?php require_once("routes.php") ?>
 </body>
 </html>
