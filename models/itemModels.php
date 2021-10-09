@@ -8,6 +8,16 @@
             $this->name=$name;
             $this->detail=$detail;
         }
+        public static function getCount(){
+            $count=0;
+            require("connection_connect.php");
+            $sql="SELECT COUNT(Item_ID) AS Count FROM Item";
+            $result=$conn->query($sql);
+            $my_row=$result->fetch_assoc();
+            $count=$my_row["Count"];
+            require("connection_close.php");
+            return $count;
+        }
         public static function getAll(){
             $itemList=[];
             require("connection_connect.php");
@@ -24,8 +34,9 @@
         }
         public static function add($name,$detail){
             require("connection_connect.php");
+            $id=Item::getCount()+1;
             $sql ="INSERT INTO Item (Item_ID,Item_Name,Item_Detail)
-            VALUES('$id+1','$name','$detail')";
+            VALUES('$id','$name','$detail')";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
