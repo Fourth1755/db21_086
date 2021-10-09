@@ -24,8 +24,9 @@
         }
         public static function add($name,$detail){
             require("connection_connect.php");
-            $id= "SELECT COUNT(Item_ID) FROM Item";
-            echo $id;
+            $sql = "SELECT COUNT(Item_ID) FROM Item";
+            $result=$conn->query($sql);
+            echo $result;
             $sql ="INSERT INTO Item (Item_ID,Item_Name,Item_Detail)
             VALUES('$id+1','$name','$detail')";
             $result=$conn->query($sql);
