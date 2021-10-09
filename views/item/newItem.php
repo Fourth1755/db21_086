@@ -13,7 +13,7 @@
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Item</label>
-        <input type="text" class="form-control" name= "name" placeholder="Item_Name">
+        <input type="text" class="form-control" name="name" placeholder="Item_Name">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Detail</label>
