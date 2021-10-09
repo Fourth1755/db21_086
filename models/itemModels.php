@@ -3,12 +3,10 @@
         public $id;
         public $name;
         public $detail;
-
         public function __construct($id,$name,$detail){
             $this->id=$id;
             $this->name=$name;
             $this->detail=$detail;
-            
         }
         public static function getAll(){
             $itemList=[];
@@ -23,6 +21,14 @@
             }
             require("connection_close.php");
             return $itemList;
+        }
+        public static function add($name,$detail){
+            require("connection_connect.php");
+            $sql ="INSERT INTO Item (Item_Name,Item_Detail)
+            VALUES('$name','$detail')";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Add success $result rows";
         }
     }
 ?>

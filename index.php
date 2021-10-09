@@ -38,13 +38,13 @@
           <a class="nav-link active" aria-current="page" href="?controller=item&action=index">Item</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=orderdetail&action=index">Itemlist</a>
+          <a class="nav-link active" aria-current="page" href="?controller=itemlist&action=index">Itemlist</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=rate&action=index_rate">Necessities</a>
+          <a class="nav-link active" aria-current="page" href="?controller=necessities&action=index">Necessities</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=rate&action=index_rate">Videocall</a>
+          <a class="nav-link active" aria-current="page" href="?controller=videocall&action=index">Videocall</a>
         </li>
       </ul>
     </div>

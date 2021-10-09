@@ -8,17 +8,13 @@
         //     $customer_list=Customer::getAll();
         //     require_once('views/order/customer.php');
         // }
-        // public function newOrder(){
-        //     $employee_list=Employee::getAll();
-        //     $customer_list=Customer::getAll();
-        //     require_once('views/order/newOrder.php');
-        // }
-        // public function addOrder(){
-        //     $id=$_GET["id"];
-        //     $date=$_GET["date"];
-        //     $sellerID=$_GET["sellerID"];
-        //     $customerID=$_GET["customerID"];
-        //     $deposit=$_GET["deposit"];
+        public function newItem(){
+             require_once('views/item/newItem.php');
+         }
+        public function addItem(){
+             $id=$_GET["id"];
+             $name=$_GET["name"];
+             $detail=$_GET["detail"];
         //     //$managerID=$_GET["managerID"];
         //     //$dateApprov=$_GET["dateApprov"];
         //     //$extraProduct=$_GET["extraProduct"];
@@ -27,9 +23,9 @@
         //     if($deposit==NULL){
         //         $deposit=0;
         //     }
-        //     Order::add($id,$date,$sellerID,$customerID,$deposit);
-        //     OrderController::index();
-        // }
+             Item::add($id,$name,$detail);
+             ItemController::index();
+        }
         // public function updateForm(){
         //     $id=$_GET["orderID"];
         //     $order=Order::get($id);
