@@ -18,8 +18,8 @@
                 <td>$item->name</td>
                 <td>$item->detail</td>
                 ";?>
-                <td><a type="button" class="btn btn-primary"href=?controller=order&action=updateForm&<?php echo "itemID=$item->id";?>><i class="material-icons">build</i></a></td>
-                <td><a class="btn btn-danger"href=?controller=order&action=deleteConfirm&<?php echo "itemID=$item->id";?>><i class="material-icons">delete</i></a></td>
+                <td><a type="button" class="btn btn-primary"href=?controller=item&action=updateForm&<?php echo "itemID=$item->id";?>><i class="material-icons">build</i></a></td>
+                <td><a class="btn btn-danger"href=?controller=item&action=deleteConfirm&<?php echo "itemID=$item->id";?>><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php
             }    
