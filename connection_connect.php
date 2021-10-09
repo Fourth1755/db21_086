@@ -1,3 +1,4 @@
+<div style="text-align: center;"></div>
 <?php
     //เชื่อมต่อ server
     $severname = "localhost";
@@ -20,3 +21,4 @@
         echo " Successfully connected to databse ";
     }
 ?>
+</div>

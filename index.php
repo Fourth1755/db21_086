@@ -50,7 +50,7 @@
     </div>
   </div>
 </nav>
-<div style="text-align: center;" class="text-light">
+<div style="text-align: center;">
         <?php
             echo "controller=".$controller.",action= ".$action;
         ?>
