@@ -53,15 +53,15 @@
         //     $order_list=Order::search($key);
         //     require_once('views/order/index_order.php');
         // }
-        // public function deleteConfirm(){
-        //     $id=$_GET['orderID'];
-        //     $order=Order::get($id);
-        //     require_once('views/order/deleteConfirm.php');
-        // }
-        // public function delete(){
-        //     $id=$_GET['orderID'];
-        //     $order=Order::delete($id);
-        //     OrderController::index();
-        // }
+        public function deleteConfirm(){
+             $id=$_GET['itemID'];
+             $item=Item::get($id);
+             require_once('views/item/deleteConfirm.php');
+        }
+        public function delete(){
+             $id=$_GET['orderID'];
+             $item=Item::delete($id);
+             ItemController::index();
+        }
     }
 ?>

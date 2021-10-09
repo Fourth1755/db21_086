@@ -8,6 +8,17 @@
             $this->name=$name;
             $this->detail=$detail;
         }
+        public static function get($id){
+            require("connection_connect.php");
+            $sql="SELECT * FROM Item WHERE Item_ID='$id'";
+            $result=$conn->query($sql);
+            $my_row=$result->fetch_assoc();
+            $id=$my_row["Item_ID"];
+            $name=$my_row["Item_Name"];
+            $detail=$my_row["Item_Detail"];
+            require("connection_close.php");
+            return new Item($id,$name,$detail);
+        }
         public static function getCount(){
             $count=0;
             require("connection_connect.php");
@@ -39,6 +50,13 @@
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
+        }
+        public static function delete($id){
+            require("connection_connect.php");
+            $sql="DELETE FROM Item WHERE Item_ID='$id'";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Delete success $result rows";
         }
     }
 ?>
