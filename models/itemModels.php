@@ -34,9 +34,8 @@
         }
         public static function add($name,$detail){
             require("connection_connect.php");
-            $id=Item::getCount()+1;
             $sql ="INSERT INTO Item (Item_ID,Item_Name,Item_Detail)
-            VALUES('$id','$name','$detail')";
+            VALUES('$name','$detail')";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
