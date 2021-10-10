@@ -10,6 +10,9 @@
             case "item" :require_once("models/itemModels.php");
                         $controller = new ItemController();
                         break;
+            case "videocall" :require_once("models/videocallModels.php");
+                        $controller =new VideocallController();
+                        break;
             // case "order": require_once("models/orderModels.php");
             //             require_once("models/employeeModels.php");
             //             require_once("models/customerModels.php");
