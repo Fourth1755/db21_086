@@ -11,16 +11,18 @@
         if (x == "" || x == null) {
         alert("Date must be filled out");
         return false;
+        }
         var x = document.forms["myForm"]["color"].value;
         if (x == "" || x == null) {
         alert("Color must be filled out");
         return false;
+        }
         var x = document.forms["myForm"]["symptom"].value;
         if (x == "" || x == null) {
         alert("Symptom must be filled out");
         return false;
-  }
-}
+        }
+        }
 </script>
 </head>
 <body>
