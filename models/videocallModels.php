@@ -44,7 +44,7 @@
         public static function add($date,$color,$symptom,$homeisolationID){
             require("connection_connect.php");
             if($homeisolationID!=""){
-                $homeisolationID="'".$dateMenufacture."'";
+                $homeisolationID="'".$homeisolationID."'";
             }
             else{
                 $homeisolationID="NULL";
@@ -79,6 +79,14 @@
             }
             require("connection_close.php");
             return $videocallList;
+        }
+        public static function update($id,$date,$color,$symptom,$homeisolationID){
+            require("connection_connect.php");
+            $sql="UPDATE Videocall SET Videocall_ID=$id,Videocall_Date='$date',Videocall_Color='$color',VideoCall_Symptom='$symptom'
+            ,HomeIsolation_ID='$homeisolationID' WHERE Videocall_ID='$id'";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Update success $result rows";
         }
     }
 ?>

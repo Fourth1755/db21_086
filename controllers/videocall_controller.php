@@ -32,5 +32,19 @@
             $videocall_list=Videocall::search($key);
             require_once("views/videocall/index_videocall.php");
         }
+        public function updateForm(){
+            $id=$_GET["videocallID"];
+            $videocall=Videocall::get($id);
+            require_once("views/videocall/updateForm.php");
+        }
+        public function updateVideo(){
+            $id=$_GET["id"];
+            $date=$_GET["date"];
+            $color=$_GET["color"];
+            $symptom=$_GET["symptom"];
+            $homeisolationID=$_GET["homeisolationID"];
+            Videocall::update($id,$date,$color,$symptom,$homeisolationID);
+            VideocallController::index();
+        }
     }
 ?>

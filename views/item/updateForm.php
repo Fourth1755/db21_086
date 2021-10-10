@@ -12,7 +12,7 @@
         <form method="get" action="" style="width: 40%;">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
-        <input type="text" class="form-control" name= "itemID"  value="<?php echo $item->id;?>" placeholder="Item_ID"/> 
+        <input type="text" class="form-control" name= "id"  value="<?php echo $item->id;?>" placeholder="Item_ID"/> 
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Item</label>

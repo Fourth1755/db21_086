@@ -1,7 +1,7 @@
 <?php
     $controllers =array('pages'=>['home', 'error'],
     'item'=>['index','newItem','addItem','deleteConfirm','delete','search','updateForm','updateItem'],
-    'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search']);
+    'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm']);
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){

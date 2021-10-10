@@ -38,21 +38,21 @@
         //     OrderController::index();
                Item::update($id,$name,$detail);
                ItemController::index();
-        }
-        public function search(){
+          }
+          public function search(){
              $key=$_GET["key"];
              $item_list=Item::search($key);
              require_once('views/item/index_item.php');
-        }
-        public function deleteConfirm(){
+          }
+          public function deleteConfirm(){
              $id=$_GET['itemID'];
              $item=Item::get($id);
              require_once('views/item/deleteConfirm.php');
-        }
-        public function delete(){
+          }
+          public function delete(){
              $id=$_GET['itemID'];
              $item=Item::delete($id);
              ItemController::index();
-        }
+          }
     }
 ?>
