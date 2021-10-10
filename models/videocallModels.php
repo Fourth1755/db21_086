@@ -66,7 +66,7 @@
             $videocallList=[];
             require("connection_connect.php");
             $sql="SELECT * FROM Videocall WHERE (Videocall_ID LIKE '%$key%' OR VideoCall_Date LIKE '%$key%' OR VideoCall_Color LIKE '%$key%'
-            VideoCall_Symptom LIKE '%$key%')";
+            OR VideoCall_Symptom LIKE '%$key%')";
             $result=$conn->query($sql);
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
