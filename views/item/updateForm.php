@@ -23,7 +23,7 @@
         <input type="text" class="form-control" name="detail" value="<?php echo $item->detail;?>" placeholder="Item_Detail"/>
     </div>
     <br>
-    <input type="hidden" name="controller" value="order" class="form-control">
+    <input type="hidden" name="controller" value="item" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
     <button type="submit" class="btn btn-success" name="action" value="updateItem">Update</button>
     </form>
