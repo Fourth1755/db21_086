@@ -8,7 +8,7 @@
             $homeisolation_list=HomeIsolation::getAll();
             require_once('views/videocall/newVideocall.php');
          }
-         public function addVideocall(){
+        public function addVideocall(){
             $id=$_GET["id"];
             $date=$_GET["date"];
             $color=$_GET["color"];
@@ -16,6 +16,16 @@
             $homeisolationID=$_GET["homeisolationID"];
             Videocall::add($date,$color,$symptom,$homeisolationID);
             VideocallController::index();
-         }
+        }
+        public function deleteConfirm(){
+            $id=$_GET["videocallID"];
+            $videocall=Videocall::get($id);
+            require_once('views/videocall/deleteConfirm.php');
+        }
+        public function delete(){
+            $id=$_GET["videocallID"];
+            Videocall::delete($id);
+            VideocallController::index();
+        }
     }
 ?>
