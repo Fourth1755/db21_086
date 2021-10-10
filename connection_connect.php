@@ -13,7 +13,6 @@
     else{
         echo " Successfully connected to server ";
     }
-
     if(!$conn->select_db($dbname)){
         echo $conn->connect_error;
     }
