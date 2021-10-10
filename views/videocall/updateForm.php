@@ -10,20 +10,24 @@
 <div class="container">
         <h1>Add new Videocall</h1>
         <form name="myForm" onsubmit="return validateForm()" method="get" required action="" style="width: 40%; ">
+        <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">ID</label>
+        <input type="text" class="form-control" name="id" value="<?php echo $videocall->id;?>" placeholder="VideoCall_ID">
+    </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Date</label>
-        <input type="date" class="form-control" name="date" value="<?php echo $video->id;?>" placeholder="VideoCall_Date">
+        <input type="date" class="form-control" name="date" value="<?php echo $videocall->date;?>" placeholder="VideoCall_Date">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
                 <?php
-                    if($video->color==""){
+                    if($videocall->color==""){
                         echo "<option selected disabled hidden>Open this select Color</option>";
                     }
                     else{
-                        echo "<option selected disabled hidden value=$video->color";
-                        echo ">$video->color</option>";
+                        echo "<option selected disabled hidden value=$videocall->color";
+                        echo ">$videocall->color</option>";
                     }
                 ?>
                 <option value="เขียว">เขียว</option>
@@ -34,17 +38,17 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Symptom</label>
-        <input type="text" class="form-control" name= "symptom" value="<?php echo $video->symptom;?>" placeholder="VideoCall_Symptom">
+        <input type="text" class="form-control" name= "symptom" value="<?php echo $videocall->symptom;?>" placeholder="VideoCall_Symptom">
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">HomeIsolation
             <select name="homeisolationID" class="form-select" aria-label="Default select example">
                 <?php
-                    if($video->homeisolationID==""){
+                    if($videocall->homeisolationID==""){
                         echo "<option selected disabled hidden>Open this select HomeIsolation</option>";
                     }
                     else{
-                        echo "<option selected disabled hidden value=$video->homeisolation>$video->homeisolation</option>";
+                        echo "<option selected disabled hidden value=$videocall->homeisolation>$videocall->homeisolation</option>";
                     }
                     foreach($homeisolation_list as $hom){
                         echo"<option value=$hom->id>$hom->id</option>";
