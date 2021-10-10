@@ -48,7 +48,7 @@
                         echo "<option selected disabled hidden>Open this select HomeIsolation</option>";
                     }
                     else{
-                        echo "<option selected disabled hidden value=$videocall->homeisolation>$videocall->homeisolation</option>";
+                        echo "<option selected disabled hidden value=$videocall->homeisolationID>$videocall->homeisolationID</option>";
                     }
                     foreach($homeisolation_list as $hom){
                         echo"<option value=$hom->id>$hom->id</option>";
