@@ -38,7 +38,7 @@
             $videocall=Videocall::get($id);
             require_once("views/videocall/updateForm.php");
         }
-        public function updateVideo(){
+        public function updateVideocall(){
             $id=$_GET["id"];
             $date=$_GET["date"];
             $color=$_GET["color"];

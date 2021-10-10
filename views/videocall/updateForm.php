@@ -60,7 +60,7 @@
     <br>
     <input type="hidden" name="controller" value="videocall" class="form-control">
     <button type="submit" class="btn btn" name="action" value="index">Back</button>
-    <button type="submit" class="btn btn-success" name="action" value="updateVideo">Update</button>
+    <button type="submit" class="btn btn-success" name="action" value="updateVideocall">Update</button>
     </form>
     </div>
 </body>
