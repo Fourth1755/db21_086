@@ -27,5 +27,10 @@
             Videocall::delete($id);
             VideocallController::index();
         }
+        public function search(){
+            $key=$_GET["key"];
+            $videocall_list=Videocall::search($key);
+            require_once("views/videocall/index_videocall.php");
+        }
     }
 ?>

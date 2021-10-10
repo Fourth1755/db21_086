@@ -62,5 +62,23 @@
             require("connection_close.php");
             return "Delete success $result rows";
         }
+        public static function search($key){
+            $videocallList=[];
+            require("connection_connect.php");
+            $sql="SELECT * FROM Videocall WHERE (Videocall_ID LIKE '%$key%' OR VideoCall_Date LIKE '%$key%' OR VideoCall_Color LIKE '%$key%'
+            VideoCall_Symptom LIKE '%$key%')";
+            $result=$conn->query($sql);
+            $result=$conn->query($sql);
+            while($my_row = $result->fetch_assoc()){
+                $id=$my_row["VideoCall_ID"];
+                $date=$my_row["VideoCall_Date"];
+                $color=$my_row["VideoCall_Color"];
+                $symptom=$my_row["VideoCall_Symptom"];
+                $homeisolationID=$my_row["HomeIsolation_ID"];
+                $videocallList[]=new Videocall($id,$date,$color,$symptom,$homeisolationID);
+            }
+            require("connection_close.php");
+            return $videocallList;
+        }
     }
 ?>
