@@ -42,7 +42,7 @@
         </label>
     </div>
     <br>
-    <input type="hidden" name="controller" value="item" class="form-control">
+    <input type="hidden" name="controller" value="videocall" class="form-control">
     <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
     <button type="submit" class="btn btn-success" name="action" value="addVideocall">Save</button>
     </form>
