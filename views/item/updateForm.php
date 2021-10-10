@@ -12,15 +12,15 @@
         <form method="get" action="" style="width: 40%;">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
-        <input type="text" class="form-control" name= "itemID"  value="<?php echo $order->id;?>" placeholder="Quotation_ID Ex 11001"/> 
+        <input type="text" class="form-control" name= "itemID"  value="<?php echo $item->id;?>" placeholder="Item_ID"/> 
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Item</label>
-        <input type="date" class="form-control" name= "name" value="<?php echo $order->date;?>" placeholder="Quotation_Date"/>
+        <input type="text" class="form-control" name= "name" value="<?php echo $item->name;?>" placeholder="Item_Name"/>
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Detail</label>
-        <input type="text" class="form-control" name="detail" value="<?php echo $order->deposit;?>" placeholder="Quotation_Deposit"/>
+        <input type="text" class="form-control" name="detail" value="<?php echo $item->detail;?>" placeholder="Item_Detail"/>
     </div>
     <br>
     <input type="hidden" name="controller" value="order" class="form-control">
