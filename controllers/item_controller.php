@@ -10,14 +10,14 @@
         // }
           public function newItem(){
              require_once('views/item/newItem.php');
-         }
+          }
           public function addItem(){
              $id=$_GET["id"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
              Item::add($name,$detail);
              ItemController::index();
-        }
+          }
           public function updateForm(){
              $id=$_GET["itemID"];
              $item=Item::get($id);
