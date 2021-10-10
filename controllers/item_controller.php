@@ -23,7 +23,7 @@
              $item=Item::get($id);
              require_once('views/item/updateForm.php');
           }
-          public function updateOrder(){
+          public function updateItem(){
              $id=$_GET["itemID"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
