@@ -1,4 +1,4 @@
-<div style="text-align: center;"></div>
+<div style="text-align: center;">
 <?php
     //เชื่อมต่อ server
     $severname = "localhost";
