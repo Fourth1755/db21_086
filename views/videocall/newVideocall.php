@@ -12,12 +12,18 @@
         <h1>Add new Videocall</h1>
         <form method="get" action="" style="width: 40%; ">
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Item</label>
-        <input type="text" class="form-control" name="date" placeholder="VideoCall_Date">
+        <label for="formGroupExampleInput2" class="form-label">Date</label>
+        <input type="date" class="form-control" name="date" placeholder="VideoCall_Date">
     </div>
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Color</label>
-        <input type="text" class="form-control" name= "color" placeholder="VideoCall_Color">
+        <label for="formGroupExampleInput2" class="form-label">Color
+            <select name="color" class="form-select" aria-label="Default select example">
+                <option selected disabled hidden>Open this select Color</option>
+                <option value="เขียว">เขียว</option>
+                <option value="เหลือง">เหลือง</option>
+                <option value="แดง">แดง</option>
+            </select>
+        </label>
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Symptom</label>

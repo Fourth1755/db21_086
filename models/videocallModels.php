@@ -30,8 +30,14 @@
         }
         public static function add($date,$color,$symptom,$homeisolationID){
             require("connection_connect.php");
+            if($homeisolationID!=""){
+                $homeisolationID="'".$dateMenufacture."'";
+            }
+            else{
+                $homeisolationID="NULL";
+            }
             $sql ="INSERT INTO Videocall (VideoCall_Date,VideoCall_Color,VideoCall_Symptom,HomeIsolation_ID)
-            VALUES('$date','$color','$symptom','$homeisolationID')";
+            VALUES('$date','$color','$symptom',$homeisolationID)";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
