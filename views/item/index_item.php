@@ -8,17 +8,18 @@
     <title>Order</title>
 </head>
 <body >
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
+
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
     <a class="navbar-brand">Item</a>
     <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="item">
       <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
     </form>
-  </div>
-</nav>
-<div class="container">
+    </div>
+    </nav>
         <table class="table">
         <tr><td>ID</td><td>Item</td><td>Item Detail</td>
         <td>Update</td><td>Delete</td></tr>

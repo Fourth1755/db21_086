@@ -42,7 +42,7 @@
         public function search(){
              $key=$_GET["key"];
              $item_list=Item::search($key);
-             require_once('views/order/index_order.php');
+             require_once('views/order/index_item.php');
         }
         public function deleteConfirm(){
              $id=$_GET['itemID'];
