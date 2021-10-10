@@ -34,6 +34,7 @@
         }
         public function updateForm(){
             $id=$_GET["videocallID"];
+            $homeisolation_list=HomeIsolation::getAll();
             $videocall=Videocall::get($id);
             require_once("views/videocall/updateForm.php");
         }
