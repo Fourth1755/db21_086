@@ -61,7 +61,7 @@
         public static function search($key){
             $itemList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM Item WHERE (Item_ID LIKE '%$key' OR Item_Name LIKE '%$key' OR Item_Detail LIKE '$key')";
+            $sql="SELECT * FROM Item WHERE (Item_ID LIKE '%$key%' OR Item_Name LIKE '%$key%' OR Item_Detail LIKE '%$key%')";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["Item_ID"];
