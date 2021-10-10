@@ -15,15 +15,6 @@
              $id=$_GET["id"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
-        //     //$managerID=$_GET["managerID"];
-        //     //$dateApprov=$_GET["dateApprov"];
-        //     //$extraProduct=$_GET["extraProduct"];
-        //     //$dateMenufacture=$_GET["dateMenufacture"];
-        //     //$transmissionStatus=$_GET["transmissionStatus"];
-        //     if($deposit==NULL){
-        //         $deposit=0;
-        //     }
-            
              Item::add($name,$detail);
              ItemController::index();
         }
@@ -48,11 +39,11 @@
         //     Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
         //     OrderController::index();
         // }
-        // public function search(){
-        //     $key=$_GET["key"];
-        //     $order_list=Order::search($key);
-        //     require_once('views/order/index_order.php');
-        // }
+        public function search(){
+             $key=$_GET["key"];
+             $item_list=Item::search($key);
+             require_once('views/order/index_order.php');
+        }
         public function deleteConfirm(){
              $id=$_GET['itemID'];
              $item=Item::get($id);

@@ -58,5 +58,19 @@
             require("connection_close.php");
             return "Delete success $result rows";
         }
+        public static function search($key){
+            $itemList=[];
+            require("connection_connect.php");
+            $sql="SELECT * FROM item WHERE (Item_ID LIKE '%$key' OR Item_Name LIKE '%$key' OR Item_Detail LIKE '$key')";
+            $result=$conn->query($sql);
+            while($my_row = $result->fetch_assoc()){
+                $id=$my_row["Item_ID"];
+                $name=$my_row["Item_Name"];
+                $detail=$my_row["Item_Detail"];
+                $itemList[]=new Item($id,$name,$detail);
+            }
+            require("connection_close.php");
+            return $itemList;
+        }
     }
 ?>
