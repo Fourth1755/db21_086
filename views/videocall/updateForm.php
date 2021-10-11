@@ -50,7 +50,7 @@
                     //     echo "<option selected disabled hidden>Open this select Color</option>";
                     // }
                     // else{
-                        echo "<option selected disabled hidden value=$videocall->color";
+                        echo "<option selected disabled hidden value=$videocall->color ";
                         echo ">$videocall->color</option>";
                     // }
                 ?>
