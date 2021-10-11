@@ -7,7 +7,7 @@
     <title>Add new Videocall</title>
     <script>
         function validateForm() {
-        var y = document.forms["myForm"]["controller"].value;
+        var y = document.forms["myForm"]["action"].value;
         if(y=="addVideocall"){
             var x = document.forms["myForm"]["date"].value;
             if (x == "" || x == null) {
