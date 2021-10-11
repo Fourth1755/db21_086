@@ -44,6 +44,7 @@
             $color=$_GET["color"];
             $symptom=$_GET["symptom"];
             $homeisolationID=$_GET["homeisolationID"];
+            echo "$color";
             Videocall::update($id,$date,$color,$symptom,$homeisolationID);
             VideocallController::index();
         }
