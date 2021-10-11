@@ -37,10 +37,10 @@
         <label for="formGroupExampleInput2" class="form-label">Date</label>
         <input type="date" class="form-control" name="date" value="<?php echo $videocall->date;?>" placeholder="VideoCall_Date">
     </div>
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color</label>
-        <input type="text" class="form-control" name="color" value="<?php echo $videocall->color;?>" placeholder="VideoCall_Color">
-    </div>
+        <input type="text" class="form-control" name="color" value="<?php //echo $videocall->color;?>" placeholder="VideoCall_Color">
+    </div> -->
      <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
