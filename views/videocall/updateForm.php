@@ -45,12 +45,12 @@
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
                 <?php
-                    if($videocall->color==NULL){
-                        echo "<option selected disabled hidden>Open this select Color</option>";
-                    }
-                    else{
-                        echo "<option selected disabled hidden value=$videocall->color>$videocall->color</option>";
-                    }
+                    // if($videocall->color==NULL){
+                    //     echo "<option selected disabled hidden>Open this select Color</option>";
+                    // }
+                    // else{
+                    //     echo "<option selected disabled hidden value=$videocall->color>$videocall->color</option>";
+                    // }
                 ?>
                 <option value="เขียว">เขียว</option>
                 <option value="เหลือง">เหลือง</option>
