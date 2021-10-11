@@ -22,7 +22,7 @@
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
                 <?php
-                    if($videocall->color==""){
+                    if($videocall->color==NULL){
                         echo "<option selected disabled hidden>Open this select Color</option>";
                     }
                     else{
@@ -44,7 +44,7 @@
         <label for="formGroupExampleInput2" class="form-label">HomeIsolation
             <select name="homeisolationID" class="form-select" aria-label="Default select example">
                 <?php
-                    if($videocall->homeisolationID==""){
+                    if($videocall->homeisolationID==NULL){
                         echo "<option selected disabled hidden>Open this select HomeIsolation</option>";
                     }
                     else{
@@ -52,7 +52,14 @@
                     }
                     foreach($homeisolation_list as $hom){
                         echo"<option value=$hom->id>$hom->id</option>";
-                    }    
+                    }
+                    foreach($homeisolation_list as $hom){
+                        echo"<option value=$hom->id";
+                            if($hom->id==$videocall->homeisolationID){
+                                    echo " selected='selected'";
+                                }
+                            echo">$hom->id</option>";
+                            }
                 ?>
             </select>
         </label>
