@@ -26,8 +26,7 @@
                         echo "<option selected disabled hidden>Open this select Color</option>";
                     }
                     else{
-                        echo "<option selected disabled hidden value=$videocall->color";
-                        echo ">$videocall->color</option>";
+                        echo "<option selected disabled hidden value=$videocall->color>$videocall->color</option>";
                     }
                 ?>
                 <option value="เขียว">เขียว</option>
@@ -47,19 +46,13 @@
                     if($videocall->homeisolationID==NULL){
                         echo "<option selected disabled hidden>Open this select HomeIsolation</option>";
                     }
-                    else{
-                        echo "<option selected disabled hidden value=$videocall->homeisolationID>$videocall->homeisolationID</option>";
-                    }
-                    foreach($homeisolation_list as $hom){
-                        echo"<option value=$hom->id>$hom->id</option>";
-                    }
                     foreach($homeisolation_list as $hom){
                         echo"<option value=$hom->id";
                             if($hom->id==$videocall->homeisolationID){
                                     echo " selected='selected'";
                                 }
                             echo">$hom->id</option>";
-                            }
+                        }
                 ?>
             </select>
         </label>
