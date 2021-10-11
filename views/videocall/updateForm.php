@@ -5,10 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Videocall</title>
+    <script>
+        function validateForm(){
+            var x = document.forms["myForm"]["date"].value;
+            if (x == "" || x == null) {
+                alert("Date must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["color"].value;
+            if (x == "" || x == null) {
+                alert("Color must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["symptom"].value;
+            if (x == "" || x == null) {
+                alert("Symptom must be filled out");
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
-        <h1>Add new Videocall</h1>
+        <h1>Update Videocall</h1>
         <form name="myForm" onsubmit="return validateForm()" method="get" required action="" style="width: 40%; ">
         <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">ID</label>
@@ -60,7 +79,7 @@
     </div>
     <br>
     <input type="hidden" name="controller" value="videocall" class="form-control">
-    <button type="submit" class="btn btn" name="action" value="index">Back</button>
+    <a class= "btn btn-light" href=?controller=videocall&action=index>Back</a>
     <button type="submit" class="btn btn-success" name="action" value="updateVideocall">Update</button>
     </form>
     </div>
