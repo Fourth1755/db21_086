@@ -7,23 +7,26 @@
     <title>Add new Videocall</title>
     <script>
         function validateForm() {
-        var x = document.forms["myForm"]["date"].value;
-        if (x == "" || x == null) {
-        alert("Date must be filled out");
-        return false;
+        var y = document.forms["myForm"]["controller"].value;
+        if(y=="addVideocall"){
+            var x = document.forms["myForm"]["date"].value;
+            if (x == "" || x == null) {
+                alert("Date must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["color"].value;
+            if (x == "" || x == null) {
+                alert("Color must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["symptom"].value;
+            if (x == "" || x == null) {
+                alert("Symptom must be filled out");
+                return false;
+            }
         }
-        var x = document.forms["myForm"]["color"].value;
-        if (x == "" || x == null) {
-        alert("Color must be filled out");
-        return false;
         }
-        var x = document.forms["myForm"]["symptom"].value;
-        if (x == "" || x == null) {
-        alert("Symptom must be filled out");
-        return false;
-        }
-        }
-</script>
+    </script>
 </head>
 <body>
     
