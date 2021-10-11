@@ -41,7 +41,7 @@
         <label for="formGroupExampleInput2" class="form-label">Color</label>
         <input type="text" class="form-control" name="color" value="<?php echo $videocall->color;?>" placeholder="VideoCall_Color">
     </div>
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
                 <?php
@@ -57,7 +57,7 @@
                 <option value="แดง">แดง</option>
             </select>
         </label>
-    </div> 
+    </div>  -->
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Symptom</label>
         <input type="text" class="form-control" name= "symptom" value="<?php echo $videocall->symptom;?>" placeholder="VideoCall_Symptom">
