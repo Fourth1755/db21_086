@@ -61,10 +61,6 @@
         </label>
     </div>   -->
     <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Symptom</label>
-        <input type="text" class="form-control" name= "symptom" value="<?php echo $videocall->symptom;?>" placeholder="VideoCall_Symptom">
-    </div>
-    <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
                 <?php
