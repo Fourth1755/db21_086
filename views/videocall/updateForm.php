@@ -26,7 +26,8 @@
                         echo "<option selected disabled hidden>Open this select Color</option>";
                     }
                     else{
-                        echo "<option selected disabled hidden value=$videocall->color>$videocall->color</option>";
+                        echo "<option selected disabled hidden value=$videocall->color";
+                        echo ">$videocall->color</option>";
                     }
                 ?>
                 <option value="เขียว">เขียว</option>
@@ -34,7 +35,7 @@
                 <option value="แดง">แดง</option>
             </select>
         </label>
-    </div>
+    </div> 
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Symptom</label>
         <input type="text" class="form-control" name= "symptom" value="<?php echo $videocall->symptom;?>" placeholder="VideoCall_Symptom">
