@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add new Videocall</title>
     <script>
-        function validateForm() {
-        var y = document.forms["myForm"]["action"].value;
-        if(y=="addVideocall"){
+        function validateForm(){
             var x = document.forms["myForm"]["date"].value;
             if (x == "" || x == null) {
                 alert("Date must be filled out");
@@ -24,7 +22,6 @@
                 alert("Symptom must be filled out");
                 return false;
             }
-        }
         }
     </script>
 </head>
@@ -68,6 +65,8 @@
     <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
     <button type="submit" class="btn btn-success" name="action" value="addVideocall">Save</button>
     </form>
+    <input type="hidden" name="controller" value="videocall" class="form-control">
+    <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
     </div>
 </body>
 </html>
