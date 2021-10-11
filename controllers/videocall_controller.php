@@ -34,6 +34,7 @@
         }
         public function updateForm(){
             $id=$_GET["videocallID"];
+            $color_list=['เขียว','เหลือง','แดง'];
             $homeisolation_list=HomeIsolation::getAll();
             $videocall=Videocall::get($id);
             require_once("views/videocall/updateForm.php");

@@ -41,7 +41,7 @@
         <label for="formGroupExampleInput2" class="form-label">Color</label>
         <input type="text" class="form-control" name="color" value="<?php //echo $videocall->color;?>" placeholder="VideoCall_Color">
     </div> -->
-     <div class="mb-3">
+     <!-- <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
                 
@@ -50,8 +50,8 @@
                     //     echo "<option selected disabled hidden>Open this select Color</option>";
                     // }
                     // else{
-                        echo "<option selected disabled hidden value = $videocall->color ";
-                        echo ">$videocall->color</option>";
+                        //echo "<option selected disabled hidden value = $videocall->color";
+                        //echo ">$videocall->color</option>";
                     // }
                 ?>
                 <option value="เขียว">เขียว</option>
@@ -59,7 +59,29 @@
                 <option value="แดง">แดง</option>
             </select>
         </label>
-    </div>  
+    </div>   -->
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Symptom</label>
+        <input type="text" class="form-control" name= "symptom" value="<?php echo $videocall->symptom;?>" placeholder="VideoCall_Symptom">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Color
+            <select name="color" class="form-select" aria-label="Default select example">
+                <?php
+                    if($videocall->color==NULL){
+                        echo "<option selected disabled hidden>Open this select Color</option>";
+                    }
+                    foreach($color_list as $cor){
+                        echo"<option value=$cor";
+                            if($cor==$videocall->color){
+                                    echo " selected='selected'";
+                                }
+                            echo">$cor</option>";
+                        }
+                ?>
+            </select>
+        </label>
+    </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Symptom</label>
         <input type="text" class="form-control" name= "symptom" value="<?php echo $videocall->symptom;?>" placeholder="VideoCall_Symptom">
