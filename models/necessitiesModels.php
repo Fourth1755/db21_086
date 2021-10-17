@@ -47,6 +47,20 @@
             require("connection_close.php");
             return $necessitiesList;
         }
+        public static function add($date,$homeisolationID){
+            require("connection_connect.php");
+            if($homeisolationID!=""){
+                $homeisolationID="'".$homeisolationID."'";
+            }
+            else{
+                $homeisolationID="NULL";
+            }
+            $sql ="INSERT INTO Necessities (Necessities_Date,HomeIsolation_ID)
+            VALUES('$date',$homeisolationID)";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Add success $result rows";
+        }
     }
 
 ?>
