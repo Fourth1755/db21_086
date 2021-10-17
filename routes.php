@@ -1,7 +1,9 @@
 <?php
     $controllers =array('pages'=>['home', 'error'],
     'item'=>['index','newItem','addItem','deleteConfirm','delete','search','updateForm','updateItem'],
-    'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm','updateVideocall']);
+    'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm','updateVideocall'],
+    'necessities'=>['index']
+    );
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
@@ -13,6 +15,10 @@
             case "videocall" :require_once("models/videocallModels.php");
                         require_once("models/homeisolationModels.php");
                         $controller =new VideocallController();
+                        break;
+            case "necessities":
+                        require_once("models/necessitiesModels.php");
+                        $controller =new NecessitiesController();
                         break;
             // case "order": require_once("models/orderModels.php");
             //             require_once("models/employeeModels.php");
