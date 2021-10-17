@@ -5,7 +5,7 @@
         public $homeisolationID;
         public function __construct($id,$date,$homeisolationID){
             $this->id=$id;
-            $this->data=$date;
+            $this->date=$date;
             $this->homeisolationID=$homeisolationID;
         }
         public static function get($id){
