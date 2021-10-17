@@ -24,7 +24,7 @@
         ?>
     <form method="get" action="" style="width: 40%;">
         <input type="hidden" name="controller" value="necessities"/>
-        <input type="hidden" name="necessitiesID" value="<?php echo $videocall->id?>"/>
+        <input type="hidden" name="necessitiesID" value="<?php echo $necessities->id?>"/>
         <button class="btn btn-light" type="submit" name="action" value="index">Back</button>
         <button  class="btn btn-danger" type="submit" name="action" value="delete">Delete</button>
     </form>
