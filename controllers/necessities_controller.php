@@ -19,7 +19,7 @@
             $homeisolation_list=HomeIsolation::getAll();
             $id=$_GET["necessitiesID"];
             $necessities=Necessities::get($id);
-            require_once('views/videocall/deleteConfirm.php');
+            require_once('views/necessities/deleteConfirm.php');
         }
         public function delete(){
             $id=$_GET["necessitiesID"];
