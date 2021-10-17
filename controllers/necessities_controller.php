@@ -31,5 +31,21 @@
             $necessities_list=Necessities::search($key);
             require_once("views/necessities/index_necessities.php");
         }
+        public function updateForm(){
+            $id=$_GET["necessitiesID"];
+            $homeisolation_list=HomeIsolation::getAll();
+            $necessities_list=Necessities::getAll();
+            require_once("views/necessities/updateForm.php");
+        }
+        public function updateNecessities(){
+            $id=$_GET["id"];
+            $date=$_GET["date"];
+            $color=$_GET["color"];
+            $symptom=$_GET["symptom"];
+            $homeisolationID=$_GET["homeisolationID"];
+            echo "$color";
+            Videocall::update($id,$date,$color,$symptom,$homeisolationID);
+            VideocallController::index();
+        }
     }
 ?>

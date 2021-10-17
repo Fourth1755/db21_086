@@ -87,6 +87,20 @@
             require("connection_close.php");
             return $necessitiesList;
         }
+        public static function update($id,$date,$homeisolationID){
+            require("connection_connect.php");
+            if($homeisolationID!=""){
+                $homeisolationID="'".$homeisolationID."'";
+            }
+            else{
+                $homeisolationID="NULL";
+            }
+            $sql="UPDATE Necessities SET Necessities_ID='$id',Necessities_Date='$date'
+            ,HomeIsolation_ID=$homeisolationID WHERE Necessities_ID='$id'";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Update success $result rows";
+        }
     }
 
 ?>
