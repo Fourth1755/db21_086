@@ -42,7 +42,7 @@
             $date=$_GET["date"];
             $homeisolationID=$_GET["homeisolationID"];
             Necessities::update($id,$date,$homeisolationID);
-            VideocallController::index();
+            NecessitiesController::index();
         }
     }
 ?>
