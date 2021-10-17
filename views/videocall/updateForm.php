@@ -37,29 +37,6 @@
         <label for="formGroupExampleInput2" class="form-label">Date</label>
         <input type="date" class="form-control" name="date" value="<?php echo $videocall->date;?>" placeholder="VideoCall_Date">
     </div>
-    <!-- <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Color</label>
-        <input type="text" class="form-control" name="color" value="<?php //echo $videocall->color;?>" placeholder="VideoCall_Color">
-    </div> -->
-     <!-- <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Color
-            <select name="color" class="form-select" aria-label="Default select example">
-                
-                <?php
-                    // if($videocall->color==NULL){
-                    //     echo "<option selected disabled hidden>Open this select Color</option>";
-                    // }
-                    // else{
-                        //echo "<option selected disabled hidden value = $videocall->color";
-                        //echo ">$videocall->color</option>";
-                    // }
-                ?>
-                <option value="เขียว">เขียว</option>
-                <option value="เหลือง">เหลือง</option>
-                <option value="แดง">แดง</option>
-            </select>
-        </label>
-    </div>   -->
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Color
             <select name="color" class="form-select" aria-label="Default select example">
