@@ -38,7 +38,7 @@
     </div>
     <br>
     <input type="hidden" name="controller" value="item" class="form-control">
-    <button type="submit" class="btn btn" name="action" value="index">Back</button>
+    <a class= "btn btn-light" href=?controller=item&action=index>Back</a>
     <button type="submit" class="btn btn-success" name="action" value="updateItem">Update</button>
     </form>
     </div>

@@ -34,8 +34,9 @@
         <input type="text" class="form-control" name= "detail" placeholder="Item_Detail">
     </div>
     <br>
+    
     <input type="hidden" name="controller" value="item" class="form-control">
-    <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
+    <a class= "btn btn-light" href=?controller=item&action=index>Back</a>
     <button type="submit" class="btn btn-success" name="action" value="addItem">Save</button>
     </form>
     </div>
