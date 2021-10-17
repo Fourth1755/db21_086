@@ -68,6 +68,25 @@
             require("connection_close.php");
             return "Delete success $result rows";
         }
+        public static function search($key){
+            $necessitiesList=[];
+            require("connection_connect.php");
+            $sql="SELECT * FROM Necessities LEFT JOIN HomeIsolation ON Necessities.HomeIsolation_ID=HomeIsolation.HomeIsolation_Id 
+            LEFT JOIN Booker ON HomeIsolation.Booker_Id=Booker.ID_Card WHERE (Necessities_ID LIKE '%$key%' OR Necessities_Date LIKE '%$key%' OR
+            Necessities.HomeIsolation_ID LIKE '%$key%' OR Booker_FName LIKE '%$key%' OR Booker_LName LIKE '%$key%')";
+            $result=$conn->query($sql);
+            while($my_row=$result->fetch_assoc()){
+                $id=$my_row['Necessities_ID'];
+                $date=$my_row['Necessities_Date'];
+                $homeisolationID=$my_row["HomeIsolation_ID"];
+                $fname=$my_row["FName"];
+                $lname=$my_row["LName"];
+                $address=$my_row["Address"];
+                $necessitiesList[]=new Necessities($id,$date,$homeisolationID,$fname,$lname,$address);
+            }
+            require("connection_close.php");
+            return $necessitiesList;
+        }
     }
 
 ?>
