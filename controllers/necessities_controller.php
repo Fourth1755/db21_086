@@ -26,5 +26,10 @@
             Necessities::delete($id);
             NecessitiesController::index();
         }
+        public function search(){
+            $key=$_GET["key"];
+            $necessities_list=Necessities::search($key);
+            require_once("views/necessities/index_necessities.php");
+        }
     }
 ?>
