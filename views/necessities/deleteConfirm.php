@@ -11,7 +11,7 @@
     <h1>Delete Necessities</h1>
     <table class="table">
         <h4>Are you sure to delete this Necessities</h4>
-        <tr><td>ID</td><td>Date</td><td>Homeisolation ID</td>
+        <tr><td>ID</td><td>Date</td><td>Homeisolation ID</td><td>Name</td><td>LastName</td><td>Address</td>
         </tr>
         <?php
             echo "<tr><td>$necessities->id</td>
