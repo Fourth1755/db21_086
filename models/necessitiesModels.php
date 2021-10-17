@@ -73,7 +73,7 @@
             require("connection_connect.php");
             $sql="SELECT * FROM Necessities LEFT JOIN HomeIsolation ON Necessities.HomeIsolation_ID=HomeIsolation.HomeIsolation_Id 
             LEFT JOIN Booker ON HomeIsolation.Booker_Id=Booker.ID_Card WHERE (Necessities_ID LIKE '%$key%' OR Necessities_Date LIKE '%$key%' OR
-            Necessities.HomeIsolation_ID LIKE '%$key%' OR Booker_FName LIKE '%$key%' OR Booker_LName LIKE '%$key%')";
+            Necessities.HomeIsolation_ID LIKE '%$key%' OR FName LIKE '%$key%' OR LName LIKE '%$key%')";
             $result=$conn->query($sql);
             while($my_row=$result->fetch_assoc()){
                 $id=$my_row['Necessities_ID'];
