@@ -6,7 +6,7 @@
         }
         public function newNecessities(){
             $homeisolation_list=HomeIsolation::getAll();
-            require_once('views/videocall/newVideocall.php');
+            require_once('views/necessities/newNecessities.php');
         }
     }
 ?>
