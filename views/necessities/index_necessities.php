@@ -21,13 +21,16 @@
     </div>
     </nav>
         <table class="table">
-        <tr><td>ID</td><td>Date</td><td>Homeisolation ID</td>
+        <tr><td>ID</td><td>Date</td><td>Homeisolation ID</td><td>Name</td><td>LastName</td><td>Address</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($necessities_list as $necessities){
             echo "<tr><td>$necessities->id</td>
                 <td>$necessities->date</td>
                 <td>$necessities->homeisolationID</td>
+                <td>$necessities->fname</td>
+                <td>$necessities->lname</td>
+                <td>$necessities->address</td>
                 ";?>
                 <td><a type="button" class="btn btn-primary"href=?controller=necessities&action=updateForm&<?php echo "necessitiesID=$necessities->id";?>><i class="material-icons">build</i></a></td>
                 <td><a class="btn btn-danger"href=?controller=necessities&action=deleteConfirm&<?php echo "necessitiesID=$necessities->id";?>><i class="material-icons">delete</i></a></td>
