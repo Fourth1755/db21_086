@@ -17,6 +17,7 @@
                         $controller =new VideocallController();
                         break;
             case "necessities":
+                        require_once("models/homeisolationModels.php");
                         require_once("models/necessitiesModels.php");
                         $controller =new NecessitiesController();
                         break;

@@ -23,6 +23,7 @@
             $necessitiesList=[];
             require("connection_connect.php");
             $sql="SELECT * FROM Necessities ";
+            $result=$conn->query($sql);
             while($my_row=$result->fetch_assoc()){
                 $id=$my_row['Necessities_ID'];
                 $date=$my_row['Necessities_Date'];
