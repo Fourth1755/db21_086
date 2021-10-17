@@ -15,5 +15,16 @@
             Necessities::add($date,$homeisolationID);
             NecessitiesController::index();
         }
+        public function deleteConfirm(){
+            $homeisolation_list=HomeIsolation::getAll();
+            $id=$_GET["necessitiesID"];
+            $necessities=Necessities::get($id);
+            require_once('views/videocall/deleteConfirm.php');
+        }
+        public function delete(){
+            $id=$_GET["necessitiesID"];
+            Necessities::delete($id);
+            NecessitiesController::index();
+        }
     }
 ?>

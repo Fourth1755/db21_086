@@ -61,6 +61,13 @@
             require("connection_close.php");
             return "Add success $result rows";
         }
+        public static function delete($id){
+            require("connection_connect.php");
+            $sql="DELETE FROM Necessities WHERE Necessities_ID='$id'";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Delete success $result rows";
+        }
     }
 
 ?>
