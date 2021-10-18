@@ -27,5 +27,10 @@
             Itemlist::delete($id);
             ItemlistController::index();
         }
+        public function search(){
+            $key=$_GET["key"];
+            $itemlist_list=Item::search($key);
+            require_once("views/itemlist/itemlist_index.php");
+         }
     }
 ?>
