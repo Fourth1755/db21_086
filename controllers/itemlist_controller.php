@@ -29,7 +29,7 @@
         }
         public function search(){
             $key=$_GET["key"];
-            $itemlist_list=Item::search($key);
+            $itemlist_list=Itemlist::search($key);
             require_once("views/itemlist/itemlist_index.php");
          }
     }
