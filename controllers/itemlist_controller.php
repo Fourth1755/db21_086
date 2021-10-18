@@ -9,5 +9,13 @@
             $necessities_list=Necessities::getAll();
             require_once('views/itemlist/newItemlist.php');
          }
+        public function addItemlist(){
+            $id=$_GET["id"];
+            $itemID=$_GET["itemID"];
+            $necessitiesID=$_GET["necessitiesID"];
+            $quantity=$_GET["quantity"];
+            Itemlist::add($itemID,$necessitiesID,$quantity);
+            ItemlistController::index();
+        }
     }
 ?>
