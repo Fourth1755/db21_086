@@ -31,6 +31,21 @@
             $key=$_GET["key"];
             $itemlist_list=Itemlist::search($key);
             require_once("views/itemlist/itemlist_index.php");
-         }
+        }
+        public function updateForm(){
+            $id=$_GET["itemlistID"];
+            $item_list=Item::getAll();
+            $necessities_list=Necessities::getAll();
+            $itemlist=Itemlist::get($id);
+            require_once('views/itemlist/updateForm.php');
+        }
+        public function updateItemlist(){
+            $id=$_GET["id"];
+            $itemID=$_GET["itemID"];
+            $necessitiesID=$_GET["necessitiesID"];
+            $quantity=$_GET["quantity"];
+            Itemlist::
+            ItemlistController::index();
+        }
     }
 ?>

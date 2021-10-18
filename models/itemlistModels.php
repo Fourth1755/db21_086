@@ -89,5 +89,13 @@
             require("connection_close.php");
             return $itemlistList;
         }
+        public static function update($itemID,$necessitiesID,$quantity){
+            require("connection_connect.php");
+            $sql="UPDATE ItemList SET ItemList_ID='$id',Item_ID='$itemID'
+            ,Necessities_ID=$necessitiesID,ItemList_Quantity=$quantity WHERE ItemList_ID='$id'";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Update success $result rows";
+        }
     }
 ?>

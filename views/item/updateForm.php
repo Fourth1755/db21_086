@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update order</title>
+    <title>Update Item</title>
     <script>
         function validateForm(){
             var x = document.forms["myForm"]["name"].value;
@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Update order</h1>
+        <h1>Update Item</h1>
         <form name="myForm" onsubmit="return validateForm()" method="get" required action="" style="width: 40%;">
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">ID</label>
