@@ -18,7 +18,7 @@
             $itemlistList=[];
             require("connection_connect.php");
             $sql="SELECT ItemList_ID,Item.Item_ID,Item_Name,Necessities.Necessities_ID,Fname,ItemList_Quantity FROM ItemList 
-            LEFT JOIN Necessities ON ItemList.ItemList_ID=Necessities.Necessities_ID LEFT JOIN HomeIsolation 
+            LEFT JOIN Necessities ON ItemList.Necessities_ID=Necessities.Necessities_ID LEFT JOIN HomeIsolation 
             ON Necessities.HomeIsolation_ID=HomeIsolation.HomeIsolation_Id 
             LEFT JOIN Booker ON HomeIsolation.Booker_Id=Booker.ID_Card LEFT JOIN Item ON Item.Item_ID=ItemList.Item_ID";
             $result=$conn->query($sql);
