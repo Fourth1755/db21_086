@@ -44,7 +44,7 @@
             $itemID=$_GET["itemID"];
             $necessitiesID=$_GET["necessitiesID"];
             $quantity=$_GET["quantity"];
-            Itemlist::update($itemID,$necessitiesID,$quantity);
+            Itemlist::update($id,$itemID,$necessitiesID,$quantity);
             ItemlistController::index();
         }
     }
