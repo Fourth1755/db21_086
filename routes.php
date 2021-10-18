@@ -3,7 +3,7 @@
     'item'=>['index','newItem','addItem','deleteConfirm','delete','search','updateForm','updateItem'],
     'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm','updateVideocall'],
     'necessities'=>['index','newNecessities','addNecessities','deleteConfirm','delete','search','updateForm','updateNecessities'],
-    'itemlist'=>['index']
+    'itemlist'=>['index','newItemlist']
     );
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
@@ -16,6 +16,8 @@
                         $controller = new ItemController();
                         break;
             case "itemlist" :
+                        require_once("models/itemModels.php");
+                        require_once("models/necessitiesModels.php");
                         require_once("models/itemlistModels.php");
                         $controller = new ItemlistController();
                         break;
