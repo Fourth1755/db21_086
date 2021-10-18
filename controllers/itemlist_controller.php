@@ -22,7 +22,7 @@
             $necessities_list=Necessities::getAll();
             $id=$_GET["itemlistID"];
             $itemlist=Itemlist::get($id);
-            require_once('views/necessities/deleteConfirm.php');
+            require_once('views/itemlist/deleteConfirm.php');
         }
         public function delete(){
             $id=$_GET["itemlistID"];
