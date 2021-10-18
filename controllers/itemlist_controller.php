@@ -18,8 +18,6 @@
             ItemlistController::index();
         }
         public function deleteConfirm(){
-            $item_list=Item::getAll();
-            $necessities_list=Necessities::getAll();
             $id=$_GET["itemlistID"];
             $itemlist=Itemlist::get($id);
             require_once('views/itemlist/deleteConfirm.php');
