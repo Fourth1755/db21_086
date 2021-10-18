@@ -21,13 +21,15 @@
     </div>
     </nav>
         <table class="table">
-        <tr><td>ID</td><td>Item ID</td><td>Necessities ID</td><td>Quantity</td>
+        <tr><td>ID</td><td>Item ID</td><td>Item Name</td><td>Necessities ID</td><td>Name</td><td>Quantity</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($itemlist_list as $itemlist){
             echo "<tr><td>$itemlist->id</td>
                 <td>$itemlist->itemID</td>
+                <td>$itemlist->itemName</td>
                 <td>$itemlist->necessitiesID</td>
+                <td>$itemlist->fname</td>
                 <td>$itemlist->quantity</td>
                 ";?>
                 <td><a type="button" class="btn btn-primary"href=?controller=itemlist&action=updateForm&<?php echo "itemlistID=$itemlist->id";?>><i class="material-icons">build</i></a></td>
