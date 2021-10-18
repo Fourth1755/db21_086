@@ -7,14 +7,19 @@
     <title>Update order</title>
     <script>
         function validateForm(){
-            var x = document.forms["myForm"]["name"].value;
+            var x = document.forms["myForm"]["itemID"].value;
             if (x == "" || x == null) {
-                alert("Name must be filled out");
+                alert("Item must be filled out");
                 return false;
             }
-            var x = document.forms["myForm"]["detail"].value;
+            var x = document.forms["myForm"]["necessitiesID"].value;
             if (x == "" || x == null) {
-                alert("Detail must be filled out");
+                alert("Necessities must be filled out");
+                return false;
+            }
+            var x = document.forms["myForm"]["quantity"].value;
+            if (x == "" || x == null) {
+                alert("Quantity must be filled out");
                 return false;
             }
         }
