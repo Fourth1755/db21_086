@@ -11,7 +11,8 @@
     <h1>Delete Itemlist</h1>
     <table class="table">
         <h4>Are you sure to delete this Itemlist</h4>
-        <tr><td>ID</td><td>Item ID</td><td>Item Name</td><td>Necessities ID</td><td>Name</td><td>Quantity</td></tr>
+        <tr><td>ID</td><td>Item ID</td><td>Item Name</td><td>Necessities ID</td><td>Name</td><td>Quantity</td>
+        </tr>
         <?php
             echo "<tr><td>$itemlist->id</td>
                 <td>$itemlist->itemID</td>
