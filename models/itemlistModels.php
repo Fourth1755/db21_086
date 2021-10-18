@@ -37,7 +37,7 @@
         public static function add($itemID,$necessitiesID,$quantity){
             require("connection_connect.php");
             $sql ="INSERT INTO ItemList (Item_ID,Necessities_ID,ItemList_Quantity)
-            VALUES('$itemID','$necessitiesID','$quantity')";
+            VALUES('$itemID',$necessitiesID,'$quantity')";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
