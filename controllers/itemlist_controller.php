@@ -17,5 +17,17 @@
             Itemlist::add($itemID,$necessitiesID,$quantity);
             ItemlistController::index();
         }
+        public function deleteConfirm(){
+            $item_list=Item::getAll();
+            $necessities_list=Necessities::getAll();
+            $id=$_GET["itemlistID"];
+            $itemlist=Itemlist::get($id);
+            require_once('views/necessities/deleteConfirm.php');
+        }
+        public function delete(){
+            $id=$_GET["itemlistID"];
+            Itemlist::delete($id);
+            ItemlistController::index();
+        }
     }
 ?>

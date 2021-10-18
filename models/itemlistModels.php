@@ -14,6 +14,24 @@
             $this->fname=$fname;
             $this->quantity=$quantity;
         }
+        public static function get($id){
+            require("connection_connect.php");
+            $sql="SELECT ItemList_ID,Item.Item_ID,Item_Name,Necessities.Necessities_ID,Fname,ItemList_Quantity FROM ItemList 
+            LEFT JOIN Necessities ON ItemList.Necessities_ID=Necessities.Necessities_ID LEFT JOIN HomeIsolation 
+            ON Necessities.HomeIsolation_ID=HomeIsolation.HomeIsolation_Id 
+            LEFT JOIN Booker ON HomeIsolation.Booker_Id=Booker.ID_Card LEFT JOIN Item ON Item.Item_ID=ItemList.Item_ID 
+            WHERE ItemList_ID='$id'";
+            $result=$conn->query($sql);
+            $my_row=$result->fetch_assoc();
+            $id=$my_row["ItemList_ID"];
+            $itemID=$my_row["Item_ID"];
+            $itemName=$my_row["Item_Name"];
+            $necessitiesID=$my_row["Necessities_ID"];
+            $fname=$my_row["Fname"];
+            $quantity=$my_row["ItemList_Quantity"];
+            require("connection_close.php");
+            return new Itemlist($id,$itemID,$itemName,$necessitiesID,$fname,$quantity);
+        }
         public static function getAll(){
             $itemlistList=[];
             require("connection_connect.php");
@@ -41,6 +59,13 @@
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
+        }
+        public static function delete($id){
+            require("connection_connect.php");
+            $sql="DELETE FROM Necessities WHERE Necessities_ID='$id'";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Delete success $result rows";
         }
     }
 ?>
