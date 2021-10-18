@@ -30,6 +30,10 @@
         <h1>Update order</h1>
         <form name="myForm" onsubmit="return validateForm()" method="get" required action="" style="width: 40%;">
         <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">ID</label>
+        <input type="text" class="form-control" name="id" value="<?php echo $itemlist->id;?>" placeholder="ItemList_ID">
+        </div>
+        <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">HomeIsolation
             <select name="itemID" class="form-select" aria-label="Default select example">
                 <?php
