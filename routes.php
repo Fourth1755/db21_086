@@ -2,17 +2,25 @@
     $controllers =array('pages'=>['home', 'error'],
     'item'=>['index','newItem','addItem','deleteConfirm','delete','search','updateForm','updateItem'],
     'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm','updateVideocall'],
-    'necessities'=>['index','newNecessities','addNecessities','deleteConfirm','delete','search','updateForm','updateNecessities']
+    'necessities'=>['index','newNecessities','addNecessities','deleteConfirm','delete','search','updateForm','updateNecessities'],
+    'itemlist'=>['index']
     );
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
-            case "pages": $controller = new PagesController();
+            case "pages": 
+                        $controller = new PagesController();
                         break;
-            case "item" :require_once("models/itemModels.php");
+            case "item" :
+                        require_once("models/itemModels.php");
                         $controller = new ItemController();
                         break;
-            case "videocall" :require_once("models/videocallModels.php");
+            case "itemlist" :
+                        require_once("models/itemlistModels.php");
+                        $controller = new ItemlistController();
+                        break;
+            case "videocall":
+                        require_once("models/videocallModels.php");
                         require_once("models/homeisolationModels.php");
                         $controller =new VideocallController();
                         break;
