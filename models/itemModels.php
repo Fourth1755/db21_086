@@ -47,7 +47,7 @@
             require("connection_close.php");
             return $itemList;
         }
-        public static function add($name,$detail){
+        public static function add($name,$detail,$image){
             require("connection_connect.php");
             $sql ="INSERT INTO Item (Item_Name,Item_Detail,Item_Image)
             VALUES('$name','$detail','$image')";
