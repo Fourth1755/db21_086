@@ -35,7 +35,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Image</label>
-        <input type="url" class="form-control" name= "image" placeholder="https://example.com" pattern="https://.*" size="30"
+        <input type="text" class="form-control" name= "image" placeholder="https://example.com" size="30"
        required>
     </div>
     <br>

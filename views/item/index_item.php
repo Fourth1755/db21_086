@@ -26,7 +26,7 @@
         <?php
             foreach($item_list as $item){
             echo "<tr><td>$item->id</td>
-                <td><img src=$item->image alt=image></td>
+                <td><img src=$item->image alt=image style=width:80px;height:80px;></td>
                 <td>$item->name</td>
                 <td>$item->detail</td>
                 ";?>

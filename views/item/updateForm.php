@@ -36,6 +36,10 @@
         <label for="formGroupExampleInput2" class="form-label">Detail</label>
         <input type="text" class="form-control" name="detail" value="<?php echo $item->detail;?>" placeholder="Item_Detail"/>
     </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Image</label>
+        <input type="text" class="form-control" name= "image" value="<?php echo $item->image;?>" placeholder="https://example.com" size="30" required>
+    </div>
     <br>
     <input type="hidden" name="controller" value="item" class="form-control">
     <a class= "btn btn-light" href=?controller=item&action=index>Back</a>
