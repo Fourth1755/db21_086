@@ -3,7 +3,8 @@
     'item'=>['index','newItem','addItem','deleteConfirm','delete','search','updateForm','updateItem'],
     'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm','updateVideocall'],
     'necessities'=>['index','newNecessities','addNecessities','deleteConfirm','delete','search','updateForm','updateNecessities'],
-    'itemlist'=>['index','newItemlist','addItemlist','deleteConfirm','delete','search','updateForm','updateItemlist']
+    'itemlist'=>['index','newItemlist','addItemlist','deleteConfirm','delete','search','updateForm','updateItemlist'],
+    'total'=>['index']
     );
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");
@@ -30,6 +31,12 @@
                         require_once("models/homeisolationModels.php");
                         require_once("models/necessitiesModels.php");
                         $controller =new NecessitiesController();
+                        break;
+            case "total":
+                        require_once("models/itemModels.php");
+                        require_once("models/necessitiesModels.php");
+                        require_once("models/itemlistModels.php");
+                        $controller= new TotalController();
                         break;
             // case "order": require_once("models/orderModels.php");
             //             require_once("models/employeeModels.php");
