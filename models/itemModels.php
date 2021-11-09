@@ -55,9 +55,9 @@
             require("connection_close.php");
             return "Add success $result rows";
         }
-        public static function update($id,$name,$detail){
+        public static function update($id,$name,$detail,$image){
             require("connection_connect.php");
-            $sql="UPDATE Item SET Item_ID=$id,Item_Name='$name',Item_Detail='$detail' WHERE Item.Item_ID='$id' ";
+            $sql="UPDATE Item SET Item_ID=$id,Item_Name='$name',Item_Detail='$detail',Item_Image='$image' WHERE Item.Item_ID='$id' ";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Update success $result rows";

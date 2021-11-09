@@ -12,7 +12,6 @@
              require_once('views/item/newItem.php');
           }
           public function addItem(){
-             $id=$_GET["id"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
              $image=$_GET["image"];
@@ -20,12 +19,12 @@
              ItemController::index();
           }
           public function updateForm(){
-             $id=$_GET["itemID"];
+             $id=$_GET["id"];
              $item=Item::get($id);
              require_once('views/item/updateForm.php');
           }
           public function updateItem(){
-             $id=$_GET["itemID"];
+             $id=$_GET["id"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
              $image=$_GET["image"];
