@@ -38,7 +38,7 @@
     </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Image</label>
-        <input type="text" class="form-control" name= "image" value="<?php echo $item->image;?>" placeholder="https://example.com" size="30" required>
+        <input type="text" class="form-control" name="image" value="<?php echo $item->image;?>" placeholder="https://example.com" size="30">
     </div>
     <br>
     <input type="hidden" name="controller" value="item" class="form-control">
