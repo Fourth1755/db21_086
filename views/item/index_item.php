@@ -21,7 +21,7 @@
     </div>
     </nav>
         <table class="table">
-        <tr><td>ID</td><td>Item</td><td>Item Detail</td>
+        <tr><td>ID</td><td> </td><td>Item</td><td>Item Detail</td>
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($item_list as $item){
