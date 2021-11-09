@@ -3,10 +3,12 @@
         public $id;
         public $name;
         public $detail;
-        public function __construct($id,$name,$detail){
+        public $image;
+        public function __construct($id,$name,$detail,$image){
             $this->id=$id;
             $this->name=$name;
             $this->detail=$detail;
+            $this->image=$image;
         }
         public static function get($id){
             require("connection_connect.php");
@@ -16,8 +18,9 @@
             $id=$my_row["Item_ID"];
             $name=$my_row["Item_Name"];
             $detail=$my_row["Item_Detail"];
+            $image=$my_row["Item_Image"];
             require("connection_close.php");
-            return new Item($id,$name,$detail);
+            return new Item($id,$name,$detail,$image);
         }
         public static function getCount(){
             $count=0;
@@ -38,22 +41,23 @@
                 $id=$my_row["Item_ID"];
                 $name=$my_row["Item_Name"];
                 $detail=$my_row["Item_Detail"];
-                $itemList[]=new Item($id,$name,$detail);
+                $image=$my_row["Item_Image"];
+                $itemList[]=new Item($id,$name,$detail,$image);
             }
             require("connection_close.php");
             return $itemList;
         }
         public static function add($name,$detail){
             require("connection_connect.php");
-            $sql ="INSERT INTO Item (Item_Name,Item_Detail)
-            VALUES('$name','$detail')";
+            $sql ="INSERT INTO Item (Item_Name,Item_Detail,Item_Image)
+            VALUES('$name','$detail','$image')";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
         }
-        public static function update($id,$name,$detail){
+        public static function update($id,$name,$detail,$image){
             require("connection_connect.php");
-            $sql="UPDATE Item SET Item_ID=$id,Item_Name='$name',Item_Detail='$detail' WHERE Item.Item_ID='$id' ";
+            $sql="UPDATE Item SET Item_ID=$id,Item_Name='$name',Item_Detail='$detail' WHERE Item.Item_ID='$id' Item_Image='$image'";
             $result=$conn->query($sql);
             require("connection_close.php");
             return "Update success $result rows";
@@ -74,7 +78,7 @@
                 $id=$my_row["Item_ID"];
                 $name=$my_row["Item_Name"];
                 $detail=$my_row["Item_Detail"];
-                $itemList[]=new Item($id,$name,$detail);
+                $itemList[]=new Item($id,$name,$detail,$image);
             }
             require("connection_close.php");
             return $itemList;

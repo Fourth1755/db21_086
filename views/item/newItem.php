@@ -33,6 +33,11 @@
         <label for="formGroupExampleInput2" class="form-label">Detail</label>
         <input type="text" class="form-control" name= "detail" placeholder="Item_Detail">
     </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Image</label>
+        <input type="url" class="form-control" name= "image" placeholder="https://example.com" pattern="https://.*" size="30"
+       required>
+    </div>
     <br>
     
     <input type="hidden" name="controller" value="item" class="form-control">

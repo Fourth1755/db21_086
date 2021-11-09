@@ -15,7 +15,8 @@
              $id=$_GET["id"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
-             Item::add($name,$detail);
+             $image=$_GET["image"];
+             Item::add($name,$detail,$image);
              ItemController::index();
           }
           public function updateForm(){
@@ -27,6 +28,7 @@
              $id=$_GET["itemID"];
              $name=$_GET["name"];
              $detail=$_GET["detail"];
+             $image=$_GET["image"];
         //     $customerID=$_GET["customerID"];
         //     $deposit=$_GET["deposit"];
         //     $managerID=$_GET["managerID"];
@@ -36,7 +38,7 @@
         //     $transmissionStatus=$_GET["transmissionStatus"];
         //     Order::update($id,$date,$sellerID,$customerID,$deposit,$managerID,$dateApprov,$extraProduct,$dateMenufacture,$transmissionStatus);
         //     OrderController::index();
-               Item::update($id,$name,$detail);
+               Item::update($id,$name,$detail,$image);
                ItemController::index();
           }
           public function search(){

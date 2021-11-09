@@ -26,6 +26,7 @@
         <?php
             foreach($item_list as $item){
             echo "<tr><td>$item->id</td>
+                <td><img src=$item->image alt=image></td>
                 <td>$item->name</td>
                 <td>$item->detail</td>
                 ";?>
