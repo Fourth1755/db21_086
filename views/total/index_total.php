@@ -31,7 +31,8 @@
                 }
                 else{
                     echo "<tr><td>$tot->fname</td>
-                    <td>prev($tot->fname)</td>";
+                    <td>"; 
+                    echo  prev($tot->fname); "</td>";
                 }
             echo
             "<td>$tot->homeisolationID</td>
