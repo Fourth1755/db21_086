@@ -27,7 +27,7 @@
             $i=0;
             foreach($total_list as $tot){
 
-            echo "<tr><td>$i</td>
+            echo "<tr><td>$i+1</td>
             <td>$tot->fname</td>
             <td>$tot->lname</td>
             <td>$tot->homeisolationID</td>
