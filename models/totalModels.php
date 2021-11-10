@@ -54,7 +54,7 @@
                 $necessitiesID=$my_row['Necessities_ID'];
                 $itemName=$my_row['Item_Name'];
                 $quantity=$my_row['ItemList_Quantity'];
-                $totallist=new Total($fname,$lname,$homeisolationID,$date,$necessitiesID,$itemName,$quantity);
+                $totallist[]=new Total($fname,$lname,$homeisolationID,$date,$necessitiesID,$itemName,$quantity);
             }
             require("connection_close.php");
             return $totallist;

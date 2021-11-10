@@ -16,7 +16,7 @@
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
         <input type="hidden" name="controller" value="videocall">
-      <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
+      <button class="btn btn-success" type="submit" value="search" name="action">Search</button>
     </form>
     </div>
     </nav>

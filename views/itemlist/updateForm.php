@@ -63,7 +63,7 @@
                             if($nes->id==$itemlist->necessitiesID){
                                     echo " selected='selected'";
                                 }
-                            echo">$nes->fname</option>";
+                            echo">$nes->fname วันที่ $nes->date</option>";
                         }
                 ?>
             </select>
