@@ -42,10 +42,7 @@
         <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($videocall_list as $videocall){
-            echo "<tr><td>$videocall->id</td>
-                <td>$videocall->date</td>
-                <td>";
-                if($videocall->color=="สีแดง"){
+            if($videocall->color=="สีแดง"){
                     $color="red";
                 }
                 if($videocall->color=="สีเขียว"){
@@ -53,13 +50,14 @@
                 }
                 if($videocall->color=="สีเหลือง"){
                     $color="yellow";
-                }
-                ?>
-                <span class="dot" id="<?php $color;
-                echo "></span></td>
-                <td>$videocall->symptom</td>
-                <td>$videocall->homeisolationID</td>";
-                ?>
+                }    
+            echo "<tr><td>$videocall->id</td>
+                <td>$videocall->date</td>";?>
+                <td><span class="dot" id="red"></span></td>
+                <?php
+                echo "<td>$videocall->symptom</td>
+                <td>$videocall->homeisolationID</td>
+                ";?>
                 <td><a type="button" class="btn btn-primary"href=?controller=videocall&action=updateForm&<?php echo "videocallID=$videocall->id";?>><i class="material-icons">build</i></a></td>
                 <td><a class="btn btn-danger"href=?controller=videocall&action=deleteConfirm&<?php echo "videocallID=$videocall->id";?>><i class="material-icons">delete</i></a></td>
                 </tr>
