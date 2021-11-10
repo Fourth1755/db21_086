@@ -29,7 +29,10 @@
                     echo "<tr><td></td>
                     <td></td>";
                 }
-                
+                else{
+                    echo "<tr><td>$tot->fname</td>
+                    <td>prev($tot->fname)</td>";
+                }
             echo
             "<td>$tot->homeisolationID</td>
             <td>$tot->date</td>
