@@ -43,17 +43,19 @@
         <?php
             foreach($videocall_list as $videocall){  
             echo "<tr><td>$videocall->id</td>
-                <td>$videocall->date</td>"
-                <td>;
+                <td>$videocall->date</td>
+                <td>";
                 if($videocall->color=="สีแดง"){
                     $color="red";
                     echo "<span style height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
                 }
                 if($videocall->color=="สีเขียว"){
                     $color="green";
+                    echo "<span style height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
                 }
                 if($videocall->color=="สีเหลือง"){
                     $color="yellow";
+                    echo "<span style height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
                 } 
                 
                 echo "</td>
