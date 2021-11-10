@@ -22,7 +22,7 @@
             $sql="SELECT FName,LName,Necessities.HomeIsolation_ID AS HomeIsolation_ID,Necessities_Date,Necessities.Necessities_ID AS Necessities_ID,Item_Name,ItemList_Quantity
             FROM Necessities LEFT JOIN HomeIsolation ON Necessities.HomeIsolation_ID=HomeIsolation.HomeIsolation_Id 
             LEFT JOIN Booker ON HomeIsolation.Booker_Id=Booker.ID_Card LEFT JOIN ItemList ON Necessities.Necessities_ID=ItemList.Necessities_ID 
-            NATURAL JOIN Item ORDER BY  Necessities.HomeIsolation_ID";
+            NATURAL JOIN Item ORDER BY Necessities.HomeIsolation_ID,Necessities_Date";
             $result=$conn->query($sql);
             while($my_row=$result->fetch_assoc()){
                 $fname=$my_row['FName'];
