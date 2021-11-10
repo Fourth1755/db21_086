@@ -44,7 +44,7 @@
             FROM Necessities LEFT JOIN HomeIsolation ON Necessities.HomeIsolation_ID=HomeIsolation.HomeIsolation_Id 
             LEFT JOIN Booker ON HomeIsolation.Booker_Id=Booker.ID_Card LEFT JOIN ItemList ON Necessities.Necessities_ID=ItemList.Necessities_ID 
             NATURAL JOIN Item WHERE (FName LIKE '%$key%' OR LName LIKE '%$key%' OR Necessities.HomeIsolation_ID LIKE '%$key%'
-            OR Necessities_Date LIKE '%$key%' OR Necessities.Necessities_ID LIKE '%$key%' OR Item_Name LIKE '%$key%' ItemList_Quantity LIKE '%$key%')";
+            OR Necessities_Date LIKE '%$key%' OR Necessities.Necessities_ID LIKE '%$key%' OR Item_Name LIKE '%$key%' OR ItemList_Quantity LIKE '%$key%')";
             $result=$conn->query($sql);
             while($my_row=$result->fetch_assoc()){
                 $fname=$my_row['FName'];
