@@ -47,7 +47,7 @@
                 <td>";
                 if($videocall->color=="สีแดง"){
                     $color="red";?>
-                    <span style ="height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;"></span>
+                    <span class="dot" id="red"></span>
                     <?php
                 }
                 if($videocall->color=="สีเขียว"){
