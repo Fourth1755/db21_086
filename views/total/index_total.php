@@ -21,34 +21,37 @@
     </div>
     </nav>
         <table class="table">
-        <tr><td>No.</td><td>Name</td><td>Lastname</td><td>Homeisolation ID</td><td>Date</td><td>Necessities ID</td><td>Item Name</td><td>Quantity</td>
+        <tr><td>Name</td><td>Lastname</td><td>Homeisolation ID</td><td>Date</td><td>Necessities ID</td><td>Item Name</td><td>Quantity</td>
         </tr>
         <?php
             $i=1;
             foreach($total_list as $tot){
-            echo "<tr><td>$i</td>";
             if($i==1){
                 echo "<td>$tot->fname</td>
-                <td>$tot->lname</td>";
+                <td>$tot->lname</td>
+                <td>$tot->homeisolationID</td>";
                 $name=$tot->fname;
+                $i++;
             }
-            else if($name=$tot->fname){
+            else if($name==$tot->fname){
                 echo "<td></td>
+                <td></td>
                 <td></td>";
             }
             else{
                 echo "<td>$tot->fname</td>
-                <td>$tot->lname</td>";
+                <td>$tot->lname</td>
+                <td>$tot->homeisolationID</td>";
                 $name=$tot->fname;
+                $i++;
             }
             echo "
-            <td>$tot->homeisolationID</td>
             <td>$tot->date</td>
             <td>$tot->necessitiesID</td>
             <td>$tot->itemName</td>
             <td>$tot->quantity</td>
             </tr>";
-            $i++;
+            
             }    
             echo "</table>";?>
     <br>
