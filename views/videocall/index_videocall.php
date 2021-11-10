@@ -47,6 +47,7 @@
                 <td>";
                 if($videocall->color=="สีแดง"){
                     $color="red";?>
+                    สีแดง
                     <span class="dot" id="red"></span>
                     <?php
                 }
