@@ -46,8 +46,9 @@
                 <td>$videocall->date</td>
                 <td>";
                 if($videocall->color=="สีแดง"){
-                    $color="red";
-                    echo "<span style =height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
+                    $color="red";?>
+                    <span style ="height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;"></span>
+                    <?php
                 }
                 if($videocall->color=="สีเขียว"){
                     $color="green";
@@ -55,11 +56,9 @@
                 }
                 if($videocall->color=="สีเหลือง"){
                     $color="yellow";
-                    echo "<span style =height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
+                    echo "<span style=height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
                 } 
-                
                 echo "</td>
-                <td><span style =height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span></td>
                 <td>$videocall->symptom</td>
                 <td>$videocall->homeisolationID</td>
                 ";?>
