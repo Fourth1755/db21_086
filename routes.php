@@ -33,9 +33,7 @@
                         $controller =new NecessitiesController();
                         break;
             case "total":
-                        require_once("models/itemModels.php");
-                        require_once("models/necessitiesModels.php");
-                        require_once("models/itemlistModels.php");
+                        require_once("models/totalModels.php");
                         $controller= new TotalController();
                         break;
             // case "order": require_once("models/orderModels.php");
