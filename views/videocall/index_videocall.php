@@ -45,17 +45,17 @@
             echo "<tr><td>$videocall->id</td>
                 <td>$videocall->date</td>
                 <td>";
-                if($videocall->color=="สีแดง"){
+                if($videocall->color=="แดง"){
                     $color="red";?>
                     สีแดง
                     <span class="dot" id="red"></span>
                     <?php
                 }
-                if($videocall->color=="สีเขียว"){
+                if($videocall->color=="เขียว"){
                     $color="green";
                     
                 }
-                if($videocall->color=="สีเหลือง"){
+                if($videocall->color=="เหลือง"){
                     $color="yellow";
                     
                 } 
