@@ -47,17 +47,18 @@
                 <td>";
                 if($videocall->color=="แดง"){
                     $color="red";?>
-                    สีแดง
                     <span class="dot" id="red"></span>
                     <?php
                 }
                 if($videocall->color=="เขียว"){
-                    $color="green";
-                    
+                    $color="green";?>
+                    <span class="dot" id="green"></span>
+                    <?php
                 }
                 if($videocall->color=="เหลือง"){
-                    $color="yellow";
-                    
+                    $color="yellow";?>
+                    <span class="dot" id="yellow"></span>
+                    <?php
                 } 
                 echo "</td>
                 <td>$videocall->symptom</td>
