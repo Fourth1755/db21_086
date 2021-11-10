@@ -24,12 +24,18 @@
         <tr><td>No.</td><td>Name</td><td>Lastname</td><td>Homeisolation ID</td><td>Date</td><td>Necessities ID</td><td>Item Name</td><td>Quantity</td>
         </tr>
         <?php
-            $i=0;
+            $i=1;
             foreach($total_list as $tot){
-
-            echo "<tr><td>$i+1</td>
-            <td>$tot->fname</td>
-            <td>$tot->lname</td>
+            echo "<tr><td>$i</td>";
+            if($i==1){
+                echo "<td>$tot->fname</td>
+                <td>$tot->lname</td>";
+            }
+            else{
+                echo "<td></td>
+                <td></td>";
+            }
+            echo "
             <td>$tot->homeisolationID</td>
             <td>$tot->date</td>
             <td>$tot->necessitiesID</td>
