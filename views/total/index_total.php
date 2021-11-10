@@ -39,18 +39,13 @@
                 echo "<td></td>
                 <td></td>";
             }
-            $i++;
             echo "<td>$tot->homeisolationID</td>
             <td>$tot->date</td>
             <td>$tot->necessitiesID</td>
             <td>$tot->itemName</td>
-            <td>$tot->quantity</td>
-                ";?>
-                </tr>
-            <?php
-            }    
-            echo "</table>";
-        ?>
+            <td>$tot->quantity</td></tr>
+            $i++;  
+            </table>";?>
     <br>
     <br>
     <br>
