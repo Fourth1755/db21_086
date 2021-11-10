@@ -36,6 +36,7 @@
             <td>$tot->itemName</td>
             <td>$tot->quantity</td>
             </tr>";
+            $i++;
             }    
             echo "</table>";?>
     <br>
