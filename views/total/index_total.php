@@ -25,15 +25,11 @@
         </tr>
         <?php
             foreach($total_list as $tot){
-                
                 if(prev($tot->fname)==$tot->fname){
                     echo "<tr><td></td>
                     <td></td>";
                 }
-                else{
-                    echo "<tr><td>$tot->fname</td>
-                    <td>$tot->lname</td>";
-                }
+                
             echo
             "<td>$tot->homeisolationID</td>
             <td>$tot->date</td>
