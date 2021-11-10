@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         .grid{
-        margin: 80px;
+        margin: 60px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap: 30px;
