@@ -17,7 +17,6 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;400;500&display=swap');
     </style>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -36,23 +35,21 @@
           <a class="nav-link active" aria-current="page" href="http://158.108.207.4/db21/db21_080/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=item&action=index">Item</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=itemlist&action=index">Itemlist</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=necessities&action=index">Necessities</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=videocall&action=index">Videocall</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?controller=total&action=index">Total</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="http://158.108.207.4/db21">Index of/db21</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ข้อมูล Item&Video
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="?controller=item&action=index">Item</a></li>
+            <li><a class="dropdown-item" href="?controller=itemlist&action=index">Itemlist</a></li>
+            <li><a class="dropdown-item" href="?controller=necessities&action=index">Necessities</a></li>
+            <li><a class="dropdown-item" href="?controller=videocall&action=index">Videocall</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="?controller=total&action=index">Total</a></li>
+          </ul>
+        </li>        
       </ul>
     </div>
   </div>
