@@ -25,11 +25,8 @@
         </tr>
         <?php
             foreach($total_list as $tot){
-                if(prev($tot->fname)==NULL){
-                    echo "<tr><td>$tot->fname</td>
-                    <td>$tot->lname</td>";
-                }
-                else if(prev($tot->fname)==$tot->fname){
+                
+                if(prev($tot->fname)==$tot->fname){
                     echo "<tr><td></td>
                     <td></td>";
                 }
