@@ -12,32 +12,33 @@
 <div class="container">
     <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-    <a class="navbar-brand">Item</a>
+    <a class="navbar-brand">Total</a>
     <form class="d-flex" method="get" action="">
         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="key">
-        <input type="hidden" name="controller" value="item">
-      <button class="btn btn-outline-success" type="submit" value="search" name="action">Search</button>
+        <input type="hidden" name="controller" value="total">
+      <button class="btn btn-success" type="submit" value="search" name="action">Search</button>
     </form>
     </div>
     </nav>
         <table class="table">
-        <tr><td>ID</td><td> </td><td>Item</td><td>Item Detail</td>
-        <td>Update</td><td>Delete</td></tr>
+        <tr><td>Name</td><td>Lastname</td><td>Homeisolation ID</td><td>Date</td><td>Necessities ID</td><td>Item Name</td><td>Quantity</td>
+        </tr>
         <?php
-            foreach($item_list as $item){
-            echo "<tr><td>$item->id</td>
-                <td><img src=$item->image alt=image style=width:80px;height:80px;></td>
-                <td>$item->name</td>
-                <td>$item->detail</td>
+            foreach($total_list as $tot){
+            echo "<tr>
+            <td>$tot->fname</td>
+            <td>$tot->lname</td>
+            <td>$tot->homeisolationID</td>
+            <td>$tot->date</td>
+            <td>$tot->necessitiesID</td>
+            <td>$tot->itemName</td>
+            <td>$tot->quantity</td>
                 ";?>
-                <td><a type="button" class="btn btn-primary"href=?controller=item&action=updateForm&<?php echo "id=$item->id";?>><i class="material-icons">build</i></a></td>
-                <td><a class="btn btn-danger"href=?controller=item&action=deleteConfirm&<?php echo "itemID=$item->id";?>><i class="material-icons">delete</i></a></td>
                 </tr>
             <?php
             }    
             echo "</table>";
         ?>
-    <a class= "btn btn-success" href=?controller=item&action=newItem>Add new</a>
     <br>
     <br>
     <br>

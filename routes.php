@@ -4,7 +4,7 @@
     'videocall'=>['index','newVideocall','addVideocall','deleteConfirm','delete','search','updateForm','updateVideocall'],
     'necessities'=>['index','newNecessities','addNecessities','deleteConfirm','delete','search','updateForm','updateNecessities'],
     'itemlist'=>['index','newItemlist','addItemlist','deleteConfirm','delete','search','updateForm','updateItemlist'],
-    'total'=>['index']
+    'total'=>['index','search']
     );
     function call($controller, $action){
         require_once("controllers/".$controller."_controller.php");

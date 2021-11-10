@@ -32,7 +32,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://158.108.207.4/db21">Index of/db21</a>
+          <a class="nav-link active" aria-current="page" href="http://158.108.207.4/db21/db21_080/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=item&action=index">Item</a>
@@ -45,6 +45,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="?controller=videocall&action=index">Videocall</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="?controller=total&action=index">Total</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://158.108.207.4/db21">Index of/db21</a>
         </li>
       </ul>
     </div>

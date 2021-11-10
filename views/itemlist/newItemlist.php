@@ -47,7 +47,7 @@
             <option selected disabled hidden>Open this select Necessities</option>
                 <?php
                     foreach($necessities_list as $nes){
-                        echo"<option value=$nes->id>$nes->fname</option>";
+                        echo"<option value=$nes->id>$nes->fname วันที่ $nes->date</option>";
                     }    
                 ?>
             </select>
