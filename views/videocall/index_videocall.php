@@ -39,7 +39,7 @@
     </nav>
         <table class="table">
         <tr><td>ID</td><td>Date</td><td>Color</td><td>Symptom</td><td>Homeisolation ID</td>
-        <td>Update</td><td>Delete</td><span class="dot"></span></tr>
+        <td>Update</td><td>Delete</td><span class="dot" id="red"></span></tr>
         <?php
             foreach($videocall_list as $videocall){
             echo "<tr><td>$videocall->id</td>
