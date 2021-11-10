@@ -53,7 +53,7 @@
                 }    
             echo "<tr><td>$videocall->id</td>
                 <td>$videocall->date</td>";?>
-                <td><span class="dot" id="<?php $color ?>"></span></td>
+                <td><span class="dot" id=<?php $color ?>></span></td>
                 <?php
                 echo "<td>$videocall->symptom</td>
                 <td>$videocall->homeisolationID</td>
