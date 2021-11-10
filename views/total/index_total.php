@@ -30,10 +30,16 @@
             if($i==1){
                 echo "<td>$tot->fname</td>
                 <td>$tot->lname</td>";
+                $name=$tot->fname;
             }
-            else{
+            else if($name=$tot->fname){
                 echo "<td></td>
                 <td></td>";
+            }
+            else{
+                echo "<td>$tot->fname</td>
+                <td>$tot->lname</td>";
+                $name=$tot->fname;
             }
             echo "
             <td>$tot->homeisolationID</td>
