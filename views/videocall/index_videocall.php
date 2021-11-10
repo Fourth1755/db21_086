@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title>Video Call</title>
+    <style>
+        .dot {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        }
+        #red{
+            background-color: #B22222;
+        }
+        #green{
+            background-color: #228B22;
+        }
+        #yellow{
+            background-color: #FFD700;
+        }
+</style>
 </head>
 <body >
 
@@ -27,7 +44,17 @@
             foreach($videocall_list as $videocall){
             echo "<tr><td>$videocall->id</td>
                 <td>$videocall->date</td>
-                <td>$videocall->color</td>
+                <td><span class=dot";
+                if($videocall->color=="สีแดง"){
+                    echo "id=red";
+                }
+                if($videocall->color=="สีเขียว"){
+                    echo "id=green";
+                }
+                if($videocall->color=="สีเหลือง"){
+                    echo "id=yellow";
+                }
+                echo "></span></td>
                 <td>$videocall->symptom</td>
                 <td>$videocall->homeisolationID</td>
                 ";?>
