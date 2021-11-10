@@ -52,11 +52,11 @@
                 }
                 if($videocall->color=="สีเขียว"){
                     $color="green";
-                    echo "<span style =height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
+                    
                 }
                 if($videocall->color=="สีเหลือง"){
                     $color="yellow";
-                    echo "<span style=height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span>";
+                    
                 } 
                 echo "</td>
                 <td>$videocall->symptom</td>
