@@ -39,25 +39,27 @@
     </nav>
         <table class="table">
         <tr><td>ID</td><td>Date</td><td>Color</td><td>Symptom</td><td>Homeisolation ID</td>
-        <td>Update</td><td>Delete</td><span class="dot" id="red"></span></tr>
+        <td>Update</td><td>Delete</td></tr>
         <?php
             foreach($videocall_list as $videocall){
             echo "<tr><td>$videocall->id</td>
                 <td>$videocall->date</td>
-                <td><span class=dot";
+                <td>";
                 if($videocall->color=="สีแดง"){
-                    echo "id=red";
+                    $color="red";
                 }
                 if($videocall->color=="สีเขียว"){
-                    echo "id=green";
+                    $color="green";
                 }
                 if($videocall->color=="สีเหลือง"){
-                    echo "id=yellow";
+                    $color="yellow";
                 }
+                ?>
+                <span class="dot" id="<?php $color;
                 echo "></span></td>
                 <td>$videocall->symptom</td>
-                <td>$videocall->homeisolationID</td>
-                ";?>
+                <td>$videocall->homeisolationID</td>";
+                ?>
                 <td><a type="button" class="btn btn-primary"href=?controller=videocall&action=updateForm&<?php echo "videocallID=$videocall->id";?>><i class="material-icons">build</i></a></td>
                 <td><a class="btn btn-danger"href=?controller=videocall&action=deleteConfirm&<?php echo "videocallID=$videocall->id";?>><i class="material-icons">delete</i></a></td>
                 </tr>
