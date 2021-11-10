@@ -43,9 +43,9 @@
             <td>$tot->date</td>
             <td>$tot->necessitiesID</td>
             <td>$tot->itemName</td>
-            <td>$tot->quantity</td></tr>
+            <td>$tot->quantity</td></tr>";
             $i++;  
-            </table>";?>
+            echo "</table>";?>
     <br>
     <br>
     <br>
