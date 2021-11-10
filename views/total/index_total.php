@@ -49,9 +49,8 @@
             <td>$tot->date</td>
             <td>$tot->necessitiesID</td>
             <td>$tot->itemName</td>
-            <td>$tot->quantity</td>
+            <td>X$tot->quantity</td>
             </tr>";
-            
             }    
             echo "</table>";?>
     <br>
