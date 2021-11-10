@@ -30,23 +30,23 @@
             if($i==0){
                 echo "<td>$tot->fname</td>
                 <td>$tot->lname</td>";
-                $i++;
             }
             else if($tot[$i]->fname!=$tot[$i-1]->fname){
                 echo "<td>$tot->fname</td>
                 <td>$tot->lname</td>";
-                $i++;
             }
             else{
                 echo "<td></td>
                 <td></td>";
-                $i++;
             }
+            $i++;
             echo "<td>$tot->homeisolationID</td>
             <td>$tot->date</td>
             <td>$tot->necessitiesID</td>
             <td>$tot->itemName</td>
-            <td>$tot->quantity</td></tr>";  
+            <td>$tot->quantity</td>
+            </tr>";
+            }    
             echo "</table>";?>
     <br>
     <br>
