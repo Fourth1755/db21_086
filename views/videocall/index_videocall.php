@@ -59,6 +59,7 @@
                 } 
                 
                 echo "</td>
+                <td><span style =height:25px;width:25px;border-radius: 50%;display:inline-block;background-color: #B22222;></span></td>
                 <td>$videocall->symptom</td>
                 <td>$videocall->homeisolationID</td>
                 ";?>
