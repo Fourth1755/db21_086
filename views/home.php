@@ -76,7 +76,7 @@
     align-items: center;
 }
 .col-2 .controller{
-    width: 60%;
+    width: 50%;
 }
 .color-box{
     position: absolute;
