@@ -84,7 +84,7 @@
     top:0;
     background: linear-gradient(#A9A9A9,#696969);
     border-radius: 20px 0 0 20px;
-    height: 89%;
+    height: 95%;
     width: 90%;
     z-index: -1;
     transform: translateX(150px);
@@ -130,10 +130,9 @@
                 <a href="http://158.108.207.4/db21/db21_086/?controller=item&action=index">
                     <button class="button2">Start</button>
                 </a>
-            
         </div>
         <div class="col-2">
-            <img src="6220504755.png" class="controller">
+            <img src="https://images.pngnice.com/download/2007/My-Neighbor-Totoro-PNG-Background-Image.png" class="controller">
             <div class="color-box"></div>
         </div>
     </div>
