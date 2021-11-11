@@ -16,7 +16,7 @@
     overflow: hidden;
 }
 .row{
-    display: flexbox;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
@@ -76,7 +76,7 @@
     align-items: center;
 }
 .col-2 .controller{
-    width: 50%;
+    width: 60%;
 }
 .color-box{
     position: absolute;
