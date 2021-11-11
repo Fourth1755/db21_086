@@ -136,6 +136,6 @@
             <div class="color-box"></div>
         </div>
     </div>
-    
+    </div>
 </body>
 </html>
