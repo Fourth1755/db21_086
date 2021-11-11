@@ -10,7 +10,7 @@
 <body >
 
 <div class="container">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark"style="background-color:Gray">
     <div class="container-fluid">
     <a class="navbar-brand">Necessities</a>
     <form class="d-flex" method="get" action="">
