@@ -16,7 +16,7 @@
     overflow: hidden;
 }
 .row{
-    display: flex;
+    display: flexbox;
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
