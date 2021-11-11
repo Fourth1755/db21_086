@@ -22,7 +22,7 @@
         #yellow{
             background-color: #FFD700;
         }
-</style>
+    </style>
 </head>
 <body >
 
