@@ -121,7 +121,6 @@
     <div class="row">
         <div class="col-1">
             <h2>Pooriwat<br>Poolab</h2>
-            <h3>6220504755</h3>
             <h3>Item and Video Call</h3>
             <p>เจ้าหน้าที่home isolation โทรสอบถามข้อมูลความต้องการ 
                 โดยบันทึกข้อมูลสิ่งของที่จำเป็น สำหรับส่งไปยังที่อยู่ที่ผู้ป่วยทำ 
@@ -130,12 +129,13 @@
                 <a href="http://158.108.207.4/db21/db21_086/?controller=item&action=index">
                     <button class="button2">Start</button>
                 </a>
+            
         </div>
         <div class="col-2">
             <img src="https://images.pngnice.com/download/2007/My-Neighbor-Totoro-PNG-Background-Image.png" class="controller">
             <div class="color-box"></div>
         </div>
     </div>
-    </div>
+</div>
 </body>
 </html>
